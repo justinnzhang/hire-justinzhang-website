@@ -1,2 +1,2 @@
 export { MotionHeading } from "./MotionHeading";
-export { MotionBox } from "./Box";
+export { MotionBox } from "./MotionBox";

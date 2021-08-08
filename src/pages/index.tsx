@@ -2,6 +2,7 @@ import { Box, Stack } from "@chakra-ui/layout";
 import { useBoolean } from "@chakra-ui/hooks";
 
 import { HeroSection, TLDRSection, WhoSection } from "../sections";
+import { WorkSection } from "sections/work";
 
 const Home = () => {
   const [isTLDR, setIsTLDR] = useBoolean(false);
@@ -12,6 +13,7 @@ const Home = () => {
         <HeroSection />
         <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
         <WhoSection />
+        <WorkSection />
       </Stack>
     </Box>
   );
