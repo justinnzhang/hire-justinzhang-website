@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
-import { MotionHeading, MotionBox } from "../../components/motion";
+import { MotionHeading, MotionBox } from "../motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
-import { fadeDownChild, easeProps } from "../../components/animation/variants";
+import { fadeDownChild, easeProps } from "../animation/variants";
 
 const STAGGER_INTERVAL = 0.15;
 
@@ -46,7 +46,7 @@ interface Props {
 export const TextStack = ({ word, lines }: Props) => {
   const [ref, inView] = useInView({
     rootMargin: `-350px 0px`,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const TextFill = useColorModeValue("white", "gray.800");

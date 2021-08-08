@@ -13,9 +13,14 @@ import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
-import { TextStack } from "../who/TextStack";
+import { TextStack } from "../../components/text-animations";
 
-const SkillSection = ({ title, body }) => {
+interface SkillsSnippetProps {
+  title: string;
+  body: string;
+}
+
+const SkillsSnippet = ({ title, body }: SkillsSnippetProps) => {
   const BodyText = useColorModeValue("gray.600", "gray.400");
 
   return (
@@ -27,7 +32,6 @@ const SkillSection = ({ title, body }) => {
 };
 
 export const SkillsSection = () => {
-  const BodyText = useColorModeValue("gray.600", "gray.400");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
 
   return (
@@ -53,22 +57,22 @@ export const SkillsSection = () => {
                   and long-term focused
                 </chakra.span>
               </Heading>
-
-              <SkillSection
-                title="Technical Languages"
+              <SkillsSnippet
+                title="Languages - The Technical Kind :)"
                 body="Javascript (Typescript), Java, Python, SQL"
               />
-              <SkillSection
-                title="Frameworks and Tools"
-                body="React.js, Next.js, "
+              <SkillsSnippet
+                title="Product"
+                body="User interviews, Product requirement docs, Writing user stories, Market analysis, Prioritization, Being helpful!"
               />
-
-              <Badge w="fit-content">Technical</Badge>
-              <Text color={BodyText}>
-                Making things a reality is my passion; whether that’s in
-                videography, software development, or even dreaming up new
-                business ideas
-              </Text>
+              <SkillsSnippet
+                title="Frameworks and Technical"
+                body="Node.js, React.js, Next.js, GraphQL, MongoDB, AWS (EC2, S3, Lambda, Cognito, Cloudfront)"
+              />
+              <SkillsSnippet
+                title="Software Tools"
+                body="Figma, Jira, Datadog, Adobe CC (Premiere, After Effects, Lightroom), Googling"
+              />
             </Stack>
           </GridItem>
         </Grid>

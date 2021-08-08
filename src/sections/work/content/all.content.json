@@ -1,0 +1,83 @@
+[
+  {
+    "imageKey": "/logos/casecom.png",
+    "title": "STARTUP",
+    "dates": "April 2020 - Present",
+    "body1": "Co-founder of CaseCom, the world’s first platform for hosting case competitions.",
+    "body2": "Recruited a team of 8 and worked with clients across Canada, including Shopify!",
+    "logoAlt": "CaseCom logo, purple circle intersecting a rounded square - with the intersection being blank",
+    "tags": ["current", "work"]
+  },
+  {
+    "imageKey": "/logos/shopify.png",
+    "title": "INTERNSHIP",
+    "dates": "May 2021 - Aug 2021",
+    "body1": "Intern at Shopify as a Software Developer & Product Manager Intern.",
+    "body2": "Launched a new GitHub integration and developer tools to millions of merchants globally.",
+    "logoAlt": "Shopify logo, a green bag with a white S on the front",
+    "tags": ["current", "work"]
+  },
+  {
+    "imageKey": "/logos/hw.png",
+    "title": "LEADERSHIP",
+    "dates": "April 2020 - Present",
+    "body1": "Co-director of Hack Western, one of Canada’s largest student-run hackathons.",
+    "body2": "Now my 3rd year on the team - previously led product and design for the event.",
+    "logoAlt": "Hack Western logo, a purple isometric horse",
+    "tags": ["current", "ec"]
+  },
+  {
+    "imageKey": "/logos/rbc.png",
+    "title": "INTERNSHIP",
+    "dates": "May 2020 - Aug 2020",
+    "body1": "Technical Systems Analyst Intern at the Royal Bank of Canada.",
+    "body2": "Helping to migrate over 50,000 employees over to new infrastructure and automated systems.",
+    "logoAlt": "Royal Bank of Canada logo, a blue shield with a golden lion holding a globe",
+    "tags": ["work"]
+  },
+  {
+    "imageKey": "/logos/munichre.png",
+    "title": "INTERNSHIP",
+    "dates": "June 2019 - Sept 2020",
+    "body1": "Marketing and Developer intern at Munich Re Canada, automating onboarding processes.",
+    "body2": "Returned on a remote, part-time basis to produce video campaigns and design publication covers.",
+    "logoAlt": "Munich Re logo, a series of blue lines stacked on each other, forming a diamond",
+    "tags": ["work"]
+  },
+  {
+    "imageKey": "/logos/western.png",
+    "title": "PART-TIME",
+    "dates": "Dec 2018 - Sept 2019",
+    "body1": "Marketing assistant for Western University.",
+    "body2": "Worked on lauching and producing international student recruitment campaigns highlighting student life on campus.",
+    "logoAlt": "Western university logo, the purple university crest",
+    "tags": ["work"]
+  },
+  {
+    "imageKey": "/logos/western.png",
+    "title": "LEADERSHIP",
+    "dates": "Feb 2019 - April 2020",
+    "body1": "Residence Orientation Leader (Frosh Leader).",
+    "body2": "Lived on-campus to support over 60 students in their transition into their freshman year of university.",
+    "logoAlt": "Western university logo, the purple university crest",
+    "tags": ["ec"]
+  },
+  {
+    "imageKey": "/logos/western.png",
+    "title": "MENTORSHIP",
+    "dates": "Sept 2019 - Present",
+    "body1": "Case competition and hackathon mentor for various events.",
+    "body2": "Providing resume help, technical help, and providing feedback on presentations.",
+    "logoAlt": "Western university logo, the purple university crest",
+    "tags": ["ec"]
+  },
+  {
+    "imageKey": "/logos/wfn.png",
+    "title": "CLUB LEADERSHIP",
+    "dates": "Dec 2018 - Sept 2019Sept 2019 - April 2020 ",
+    "body1": "VP of Design for WFN, Western’s largest technology and entrepeneurship club.",
+    "body2": "Supporting 10+ early career designers and hosting events reaching over 2,000 attendees",
+    "logoAlt": "WFN logo, a dark background with purple and orange text that reads WFN",
+    "tags": ["ec"]
+  }
+]
