@@ -16,6 +16,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
 import { ThemeToggle } from "../../components/layout/ThemeToggle";
+import { AnimateParent, AnimateChild } from "components/animation";
 
 export const HeroSection = () => {
   const blueGradient = useColorModeValue("blue.100", "blue.800");
@@ -31,7 +32,7 @@ export const HeroSection = () => {
         <Flex pt={4} alignItems="center">
           <Box>
             <Image
-              src="/static/memoji.png"
+              src="/static/memoji-smiling.png"
               alt="Apple memoji of Justin Zhang"
               width={50}
               height={50}
@@ -46,8 +47,8 @@ export const HeroSection = () => {
           alignItems="center"
           h="90vh"
         >
-          <GridItem colSpan={7}>
-            <Stack spacing={6}>
+          <GridItem colSpan={[12, 12, 7]}>
+            <Stack spacing={8}>
               <Heading as="h1" size="lg">
                 Hi! My name is Justin Zhang and I&apos;m seeking{" "}
                 <chakra.span color="blue.500">
@@ -55,16 +56,18 @@ export const HeroSection = () => {
                 </chakra.span>{" "}
                 for <chakra.span color="pink.500">Summer 2022</chakra.span>
               </Heading>
+
               <Text colorScheme="gray">
                 Also interested in Software Engineering roles (Web/Front-end)!
               </Text>
+
               <Stack direction="row">
                 <Button colorScheme="blue">Let&apos;s chat!</Button>
                 <Button variant="ghost">PDF Resume</Button>
               </Stack>
             </Stack>
           </GridItem>
-          <GridItem colSpan={5}>
+          <GridItem colSpan={[12, 12, 5]}>
             <AspectRatio ratio={9 / 16}>
               <Box bg="blue.200" h="full" w="full">
                 <p>Hello</p>

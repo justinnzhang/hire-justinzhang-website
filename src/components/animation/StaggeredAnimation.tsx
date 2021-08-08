@@ -38,26 +38,12 @@ export const AnimateChild = ({
   }
 };
 
-const animatedParent = {
-  initial: {
-    opacity: 1,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-      ease: easeProps,
-      staggerChildren: 0.333,
-      when: "beforeChildren",
-    },
-  },
-};
-
 interface AnimateParentProps {
   children: React.ReactNode;
   rX?: string;
   rY?: string;
   stagger?: number;
+  triggerOnce?: boolean;
 }
 
 /**
@@ -73,10 +59,11 @@ export const AnimateParent = ({
   rX = "-100px",
   rY = "0px",
   stagger = 0.333,
+  triggerOnce = true,
 }: AnimateParentProps) => {
   const [ref, inView] = useInView({
     rootMargin: `${rX} ${rY}`,
-    triggerOnce: true,
+    triggerOnce: triggerOnce,
   });
 
   return (
@@ -100,7 +87,7 @@ export const AnimateParent = ({
       animate={inView ? "enter" : "initial"}
       exit="initial"
     >
-      <main>{children}</main>
+      {children}
     </motion.div>
   );
 };

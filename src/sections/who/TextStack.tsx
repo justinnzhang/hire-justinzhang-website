@@ -46,7 +46,7 @@ interface Props {
 export const TextStack = ({ word, lines }: Props) => {
   const [ref, inView] = useInView({
     rootMargin: `-350px 0px`,
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   const TextFill = useColorModeValue("white", "gray.800");

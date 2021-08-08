@@ -13,9 +13,9 @@ import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
-import { TextStack } from "./TextStack";
+import { TextStack } from "../who/TextStack";
 
-export const WhoSection = () => {
+export const ValuesSection = () => {
   const BodyText = useColorModeValue("gray.600", "gray.400");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
 
@@ -24,37 +24,37 @@ export const WhoSection = () => {
       <Container maxW="container.lg">
         <Center p={16}>
           <Image
-            src="/static/memoji-smiling.png"
-            alt="Memoji representation of Justin Zhang smiling"
+            src="/static/memoji-thinking.png"
+            alt="Memoji representation of Justin Zhang on a laptop"
             width="200rem"
             height="200rem"
           />
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" gap={2} alignItems="center">
           <GridItem colSpan={[12, 6, 5]} mb={4}>
-            <TextStack word="WHO AM I?" lines={2} />
+            <TextStack word="MY VALUES" lines={2} />
           </GridItem>
           <GridItem colSpan={[12, 6, 6]}>
             <Stack spacing={4}>
               <Heading size="lg">
-                A Computer Science and Business student{" "}
+                Curiousity and passion, always trying new things,{" "}
                 <chakra.span color={HighlightText}>
-                  with a background in Design
+                  and learning through doing
                 </chakra.span>
               </Heading>
               <Text color={BodyText}>
-                I started out in Film Studies before transitioning into my
-                current program - driven by a curiousity of building products as
-                a whole
+                I&apos;m a firm believer in experimentation and exploring new
+                things, taking calculated risks and letting my creativity shine
               </Text>
               <Text color={BodyText}>
-                Making things a reality is my passion; whether that’s in
-                videography, software development, or even dreaming up new
-                business ideas
+                Collaboration is an essential piece of how I work, bouncing new
+                ideas and supporting others in helping them grow, or learning
+                from their unique persepectives and opinions
               </Text>
               <Text fontWeight="medium" color={HighlightText}>
-                That’s why I’m interested in Product Management, a way for me to
-                build things across engineering, business, and design
+                I recognize that I&apos;m still very early in my career and have
+                a lot to learn - hence I heavily value personal and professional
+                growth!
               </Text>
             </Stack>
           </GridItem>

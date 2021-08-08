@@ -7,15 +7,26 @@ import {
   Grid,
   GridItem,
   Center,
-  Flex,
+  Badge,
 } from "@chakra-ui/layout";
 import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
-import { TextStack } from "./TextStack";
+import { TextStack } from "../who/TextStack";
 
-export const WhoSection = () => {
+const SkillSection = ({ title, body }) => {
+  const BodyText = useColorModeValue("gray.600", "gray.400");
+
+  return (
+    <Stack>
+      <Badge w="fit-content">{title}</Badge>
+      <Text color={BodyText}>{body}</Text>
+    </Stack>
+  );
+};
+
+export const SkillsSection = () => {
   const BodyText = useColorModeValue("gray.600", "gray.400");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
 
@@ -24,7 +35,7 @@ export const WhoSection = () => {
       <Container maxW="container.lg">
         <Center p={16}>
           <Image
-            src="/static/memoji-smiling.png"
+            src="/static/memoji-laptop.png"
             alt="Memoji representation of Justin Zhang smiling"
             width="200rem"
             height="200rem"
@@ -32,29 +43,31 @@ export const WhoSection = () => {
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" gap={2} alignItems="center">
           <GridItem colSpan={[12, 6, 5]} mb={4}>
-            <TextStack word="WHO AM I?" lines={2} />
+            <TextStack word="MY SKILLS" lines={2} />
           </GridItem>
           <GridItem colSpan={[12, 6, 6]}>
-            <Stack spacing={4}>
+            <Stack spacing={8}>
               <Heading size="lg">
-                A Computer Science and Business student{" "}
+                Design driven, customer obsessed,{" "}
                 <chakra.span color={HighlightText}>
-                  with a background in Design
+                  and long-term focused
                 </chakra.span>
               </Heading>
-              <Text color={BodyText}>
-                I started out in Film Studies before transitioning into my
-                current program - driven by a curiousity of building products as
-                a whole
-              </Text>
+
+              <SkillSection
+                title="Technical Languages"
+                body="Javascript (Typescript), Java, Python, SQL"
+              />
+              <SkillSection
+                title="Frameworks and Tools"
+                body="React.js, Next.js, "
+              />
+
+              <Badge w="fit-content">Technical</Badge>
               <Text color={BodyText}>
                 Making things a reality is my passion; whether that’s in
                 videography, software development, or even dreaming up new
                 business ideas
-              </Text>
-              <Text fontWeight="medium" color={HighlightText}>
-                That’s why I’m interested in Product Management, a way for me to
-                build things across engineering, business, and design
               </Text>
             </Stack>
           </GridItem>
