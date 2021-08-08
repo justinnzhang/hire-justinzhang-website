@@ -1,0 +1,1 @@
+export { WhoSection } from "./WhoSection";

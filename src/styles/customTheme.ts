@@ -3,8 +3,8 @@ import { theme, extendTheme } from "@chakra-ui/react";
 const customTheme = extendTheme({
   fonts: {
     ...theme.fonts,
-    body: "Lexend, sans-serif",
-    heading: "Lexend, serif",
+    body: "Inter, sans-serif",
+    heading: "Inter, sans-serif",
   },
   colors: {
     ...theme.colors,

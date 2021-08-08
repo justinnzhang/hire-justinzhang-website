@@ -1,15 +1,18 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/layout";
+import { useBoolean } from "@chakra-ui/hooks";
 
-import SomeText from "components/SomeText";
-import SomeImage from "components/SomeImage";
-import CTASection from "components/CTASection";
+import { HeroSection, TLDRSection, WhoSection } from "../sections";
 
 const Home = () => {
+  const [isTLDR, setIsTLDR] = useBoolean(false);
+
   return (
-    <Box mb={8} w="full">
-      <SomeText />
-      <SomeImage />
-      <CTASection />
+    <Box w="full">
+      <Stack spacing={8}>
+        <HeroSection />
+        <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
+        <WhoSection />
+      </Stack>
     </Box>
   );
 };

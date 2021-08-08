@@ -1,1 +1,11 @@
 /* Global Styling here */
+.outline-text {
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d6bcfa; */
+  text-shadow: -1px 1px 0 #d6bcfa, 1px 1px 0 #d6bcfa, 1px -1px 0 #d6bcfa,
+    -1px -1px 0 #d6bcfa;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
