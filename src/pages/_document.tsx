@@ -34,6 +34,10 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/app-icon.png" /> */}
           <link rel="manifest" href="/manifest.json" />
+          <script
+            defer
+            src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+          />
         </Head>
         <body>
           <Main />

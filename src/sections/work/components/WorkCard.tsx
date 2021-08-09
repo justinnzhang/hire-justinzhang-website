@@ -1,9 +1,12 @@
-import { Box, Heading, Text, Stack } from "@chakra-ui/layout";
+import { Box, Heading, Text, Stack, Link } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { chakra } from "@chakra-ui/system";
 import Image from "next/image";
 
 import { AnimateChild } from "../../../components/animation";
+
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 interface WorkItem {
   imageKey: string;
@@ -12,6 +15,8 @@ interface WorkItem {
   body1: string;
   body2: string;
   logoAlt: string;
+  ctaText?: string;
+  ctaLink?: string;
   tags: string[];
 }
 
@@ -25,30 +30,45 @@ export const WorkCard = ({ item }: Props) => {
   const CardTitle = useColorModeValue("blue.500", "blue.300");
   const CardDate = useColorModeValue("blue.300", "blue.100");
 
-  const { imageKey, title, dates, body1, body2, logoAlt } = item;
+  const { imageKey, title, dates, body1, body2, logoAlt, ctaText, ctaLink } =
+    item;
 
   return (
-    <Box bg={CardBg} p={8} borderRadius="lg">
-      <Stack spacing={4}>
-        <Image
-          src={imageKey}
-          height={60}
-          width={60}
-          alt={logoAlt}
-          layout="fixed"
-        />
-        <Stack spacing={1}>
-          <Heading size="sm" letterSpacing="3%" as="h3" color={CardTitle}>
-            {title}
-          </Heading>
-          <Text size="sm" color={CardDate}>
-            {dates}
+    <AnimateChild>
+      <Box bg={CardBg} p={8} borderRadius="lg" h="100%">
+        <Stack spacing={4}>
+          <Image
+            src={imageKey}
+            height={50}
+            width={50}
+            alt={logoAlt}
+            layout="fixed"
+            objectFit="contain"
+          />
+          <Stack spacing={1}>
+            <Heading size="sm" letterSpacing="0.1rem" as="h3" color={CardTitle}>
+              {title}
+            </Heading>
+            <Text size="xs" color={CardDate} fontWeight="medium">
+              {dates}
+            </Text>
+          </Stack>
+          <Text fontWeight="medium">
+            {body1} <chakra.span color={BodyText}>{body2}</chakra.span>
           </Text>
+          {ctaLink && (
+            <Button
+              colorScheme="blue"
+              leftIcon={<HiOutlineExternalLink />}
+              as={Link}
+              isExternal
+              href={ctaLink}
+            >
+              {ctaText}
+            </Button>
+          )}
         </Stack>
-        <Text fontWeight="medium">
-          {body1} <chakra.span color={BodyText}>{body2}</chakra.span>
-        </Text>
-      </Stack>
-    </Box>
+      </Box>
+    </AnimateChild>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import { useBoolean } from "@chakra-ui/hooks";
 
 import {
@@ -8,19 +8,28 @@ import {
   WorkSection,
   ValuesSection,
   SkillsSection,
+  ShortSection,
 } from "../sections";
 
 const Home = () => {
   const [isTLDR, setIsTLDR] = useBoolean(false);
 
-  return (
-    <Box w="full">
-      <HeroSection />
-      <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
+  const contentMarkup = isTLDR ? (
+    <ShortSection />
+  ) : (
+    <>
       <WhoSection />
       <ValuesSection />
       <SkillsSection />
       <WorkSection />
+    </>
+  );
+
+  return (
+    <Box w="full">
+      <HeroSection />
+      <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
+      {contentMarkup}
     </Box>
   );
 };

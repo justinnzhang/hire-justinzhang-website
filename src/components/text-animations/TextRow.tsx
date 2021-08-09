@@ -13,32 +13,6 @@ interface AnimationParentProps {
   inView: boolean;
 }
 
-const AnimationParent = ({ children, inView }: AnimationParentProps) => {
-  return (
-    <MotionBox
-      variants={{
-        initial: {
-          opacity: 1,
-        },
-        enter: {
-          opacity: 1,
-          transition: {
-            duration: 0.1,
-            ease: easeProps,
-            staggerChildren: STAGGER_INTERVAL,
-            when: "beforeChildren",
-          },
-        },
-      }}
-      initial="initial"
-      animate={inView ? "enter" : "initial"}
-      exit="initial"
-    >
-      {children}
-    </MotionBox>
-  );
-};
-
 interface Props {
   word: string;
   lines: number;

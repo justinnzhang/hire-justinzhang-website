@@ -1,6 +1,7 @@
 import { theme, extendTheme } from "@chakra-ui/react";
 
 const customTheme = extendTheme({
+  useSystemColorMode: true,
   fonts: {
     ...theme.fonts,
     body: "Inter, sans-serif",

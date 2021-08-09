@@ -9,3 +9,23 @@
 .no-wrap {
   white-space: nowrap;
 }
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --glass-lightness: var(--chakra-ui-color-mode);
+}
+
+.adaptive-glass {
+  background: hsl(0 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .adaptive-glass {
+    background: hsl(0 0% var(--glass-lightness) / 90%);
+  }
+}

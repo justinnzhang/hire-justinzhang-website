@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -8,6 +9,7 @@ import {
   fadeUpChild,
   easeProps,
 } from "./variants";
+import { debug } from "webpack";
 
 interface AnimateChildProps {
   children: React.ReactNode;
@@ -44,6 +46,7 @@ interface AnimateParentProps {
   rY?: string;
   stagger?: number;
   triggerOnce?: boolean;
+  debugMessage?: string;
 }
 
 /**
@@ -60,11 +63,18 @@ export const AnimateParent = ({
   rY = "0px",
   stagger = 0.333,
   triggerOnce = true,
+  debugMessage,
 }: AnimateParentProps) => {
   const [ref, inView] = useInView({
     rootMargin: `${rX} ${rY}`,
     triggerOnce: triggerOnce,
   });
+
+  useEffect(() => {
+    if (debugMessage) {
+      console.log(debugMessage, inView);
+    }
+  }, [debugMessage, inView]);
 
   return (
     <motion.div
@@ -86,8 +96,9 @@ export const AnimateParent = ({
       initial="initial"
       animate={inView ? "enter" : "initial"}
       exit="initial"
+      style={{ backgroundColor: debugMessage ? "grey" : "none" }}
     >
-      {children}
+      <main>{children}</main>
     </motion.div>
   );
 };
