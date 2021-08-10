@@ -11,8 +11,20 @@ import {
   ShortSection,
 } from "../sections";
 
+function isFacebookApp() {
+  if (
+    typeof window !== "undefined" &&
+    typeof window.navigator !== "undefined"
+  ) {
+    var ua = navigator.userAgent || navigator.vendor;
+    return ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1;
+  }
+}
+
 const Home = () => {
   const [isTLDR, setIsTLDR] = useBoolean(false);
+
+  console.log("isFacebookApp", isFacebookApp());
 
   const contentMarkup = isTLDR ? (
     <ShortSection />
@@ -28,6 +40,7 @@ const Home = () => {
   return (
     <Box w="full">
       <HeroSection />
+      {isFacebookApp() && "THIS IS FACEBOOK"}
       <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
       {contentMarkup}
     </Box>

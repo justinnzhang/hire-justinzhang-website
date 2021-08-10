@@ -26,7 +26,7 @@ import { MotionBox } from "../../components/motion";
 
 export const HeroSection = () => {
   const [ref, inView] = useInView({
-    rootMargin: `-350px 0px`,
+    rootMargin: `-250px 0px`,
     triggerOnce: true,
   });
 

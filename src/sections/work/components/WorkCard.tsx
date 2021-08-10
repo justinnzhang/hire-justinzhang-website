@@ -2,6 +2,8 @@ import { Box, Heading, Text, Stack, Link } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { chakra } from "@chakra-ui/system";
+import { useBreakpointValue } from "@chakra-ui/media-query";
+
 import Image from "next/image";
 
 import { AnimateChild } from "../../../components/animation";
@@ -25,6 +27,8 @@ interface Props {
 }
 
 export const WorkCard = ({ item }: Props) => {
+  const isSmall = useBreakpointValue({ base: true, md: false });
+
   const BodyText = useColorModeValue("gray.500", "gray.400");
   const CardBg = useColorModeValue("gray.100", "gray.700");
   const CardTitle = useColorModeValue("blue.500", "blue.300");
@@ -34,8 +38,17 @@ export const WorkCard = ({ item }: Props) => {
     item;
 
   return (
-    <AnimateChild>
-      <Box bg={CardBg} p={8} borderRadius="lg" h="100%">
+    <AnimateChild className={isSmall ? "work-card-margin" : ""}>
+      <Box
+        bg={CardBg}
+        p={8}
+        borderRadius="lg"
+        h="100%"
+        w={isSmall ? "80vw" : "100%"}
+        mr={isSmall ? 4 : 0}
+        display="flex"
+        alignItems="center"
+      >
         <Stack spacing={4}>
           <Image
             src={imageKey}

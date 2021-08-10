@@ -1,4 +1,13 @@
 /* Global Styling here */
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --glass-lightness: var(--chakra-ui-color-mode);
+}
+
 .outline-text {
   /* -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #d6bcfa; */
@@ -10,15 +19,7 @@
   white-space: nowrap;
 }
 
-body,
-html {
-  scroll-behavior: smooth;
-}
-
-:root {
-  --glass-lightness: var(--chakra-ui-color-mode);
-}
-
+/* Header with frosted glass look */
 .adaptive-glass {
   background: hsl(0 0% var(--glass-lightness) / 50%);
   backdrop-filter: blur(40px);
@@ -28,4 +29,30 @@ html {
   .adaptive-glass {
     background: hsl(0 0% var(--glass-lightness) / 90%);
   }
+}
+
+/* Horizontally scrolling cards */
+.horizontal-scroll {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: top;
+  width: 100%;
+  height: auto;
+  cursor: default;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0px 1.25rem;
+  scrollbar-width: none;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.horizontal-scroll:active {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.horizontal-scroll > .work-card-margin:first-child {
+  margin-left: 1rem;
 }

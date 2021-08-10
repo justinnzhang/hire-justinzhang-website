@@ -1,5 +1,8 @@
+import { ReactNode } from "react";
+
 import { Container, Box, Center, SimpleGrid } from "@chakra-ui/layout";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/tabs";
+import { useBreakpointValue } from "@chakra-ui/media-query";
 
 import { useInView } from "react-intersection-observer";
 
@@ -17,6 +20,24 @@ function filteredContent(searchTag: string) {
   return content.filter((el) => el.tags.includes(searchTag));
 }
 
+const CardGrid = ({
+  children,
+  isSmall,
+}: {
+  children: ReactNode;
+  isSmall?: boolean;
+}) => {
+  if (isSmall) {
+    return <Box className="horizontal-scroll">{children}</Box>;
+  } else {
+    return (
+      <SimpleGrid columns={2} spacing={8} pr={4} pl={4}>
+        {children}
+      </SimpleGrid>
+    );
+  }
+};
+
 export const WorkSection = () => {
   const [ref, inView] = useInView({
     rootMargin: `-350px 0px`,
@@ -27,9 +48,18 @@ export const WorkSection = () => {
     triggerOnce: true,
   });
 
+  const isSmall = useBreakpointValue({ base: true, md: false });
+
   return (
     <Box w="full" overflow="hidden">
-      <Container maxW="container.lg" pt={16} pb={16} position="relative">
+      <Container
+        maxW="container.lg"
+        pt={16}
+        pb={16}
+        pr={0}
+        pl={0}
+        position="relative"
+      >
         <Center w="100%" pb={16}>
           <TextRow lines={4} word="WHAT I DO" />
         </Center>
@@ -55,7 +85,7 @@ export const WorkSection = () => {
             exit="initial"
           >
             <AnimateChild>
-              <TabList>
+              <TabList pr={4} pl={4}>
                 <Tab>Current</Tab>
                 <Tab>Work</Tab>
                 <Tab>Leadership</Tab>
@@ -64,7 +94,7 @@ export const WorkSection = () => {
           </MotionBox>
           <TabPanels>
             {WORK_TYPES.map((el) => (
-              <TabPanel p={0} pt={8} key={`${el}-tabPanel`}>
+              <TabPanel pr={0} pl={0} pt={8} key={`${el}-tabPanel`}>
                 <MotionBox
                   ref={ref}
                   variants={{
@@ -85,11 +115,11 @@ export const WorkSection = () => {
                   animate={inView ? "enter" : "initial"}
                   exit="initial"
                 >
-                  <SimpleGrid columns={[1, null, 2]} spacing={8}>
+                  <CardGrid isSmall={isSmall}>
                     {filteredContent(el).map((item, index) => (
                       <WorkCard item={item} key={`${el}-${index}`} />
                     ))}
-                  </SimpleGrid>
+                  </CardGrid>
                 </MotionBox>
               </TabPanel>
             ))}

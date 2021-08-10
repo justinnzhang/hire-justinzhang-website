@@ -4,7 +4,7 @@ import { MotionHeading, MotionBox } from "../motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Stack } from "@chakra-ui/layout";
 
-import { fadeDownChild, easeProps } from "../animation/variants";
+import { easeProps } from "../animation/variants";
 
 const STAGGER_INTERVAL = 0.15;
 
@@ -20,7 +20,7 @@ interface Props {
 
 export const TextRow = ({ word, lines }: Props) => {
   const [ref, inView] = useInView({
-    rootMargin: `-350px 0px`,
+    rootMargin: `-300px 0px`,
     triggerOnce: true,
   });
 

@@ -14,6 +14,7 @@ import { debug } from "webpack";
 interface AnimateChildProps {
   children: React.ReactNode;
   direction?: "in" | "left" | "right" | "up";
+  className?: string;
 }
 
 /**
@@ -25,18 +26,39 @@ interface AnimateChildProps {
 export const AnimateChild = ({
   children,
   direction = "up",
+  className,
 }: AnimateChildProps) => {
   switch (direction) {
     case "up":
-      return <motion.div variants={fadeUpChild}>{children}</motion.div>;
+      return (
+        <motion.div variants={fadeUpChild} className={className}>
+          {children}
+        </motion.div>
+      );
     case "left":
-      return <motion.div variants={fadeLeftChild}>{children}</motion.div>;
+      return (
+        <motion.div variants={fadeLeftChild} className={className}>
+          {children}
+        </motion.div>
+      );
     case "right":
-      return <motion.div variants={fadeRightChild}>{children}</motion.div>;
+      return (
+        <motion.div variants={fadeRightChild} className={className}>
+          {children}
+        </motion.div>
+      );
     case "in":
-      return <motion.div variants={fadeInChild}>{children}</motion.div>;
+      return (
+        <motion.div variants={fadeInChild} className={className}>
+          {children}
+        </motion.div>
+      );
     default:
-      return <motion.div variants={fadeUpChild}>{children}</motion.div>;
+      return (
+        <motion.div variants={fadeUpChild} className={className}>
+          {children}
+        </motion.div>
+      );
   }
 };
 

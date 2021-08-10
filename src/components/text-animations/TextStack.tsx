@@ -45,7 +45,7 @@ interface Props {
 
 export const TextStack = ({ word, lines }: Props) => {
   const [ref, inView] = useInView({
-    rootMargin: `-350px 0px`,
+    rootMargin: `-300px 0px`,
     triggerOnce: true,
   });
 
