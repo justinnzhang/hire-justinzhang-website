@@ -7,7 +7,6 @@ import {
   Grid,
   GridItem,
   Center,
-  Flex,
 } from "@chakra-ui/layout";
 import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
@@ -16,7 +15,7 @@ import Image from "next/image";
 import { TextStack } from "../../components/text-animations";
 
 export const WhoSection = () => {
-  const BodyText = useColorModeValue("gray.600", "gray.400");
+  const BodyText = useColorModeValue("gray.600", "gray.300");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
 
   return (

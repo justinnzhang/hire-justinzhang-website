@@ -12,21 +12,21 @@ import { Button } from "@chakra-ui/button";
 import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
-export const ShortSection = () => {
-  const BodyText = useColorModeValue("gray.600", "gray.400");
+export const FinalSection = () => {
+  const BodyText = useColorModeValue("gray.600", "gray.300");
   const CardText = useColorModeValue("gray.500", "gray.400");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
   const CardBg = useColorModeValue("gray.100", "gray.700");
 
   return (
-    <Container maxW="container.lg" pt={16} pb={16} position="relative">
-      <Grid templateColumns="repeat(12, 1fr)" gap={8} alignItems="center">
+    <Container maxW="container.lg" pb={16} position="relative">
+      <Grid templateColumns="repeat(12, 1fr)" gap={24} alignItems="center">
         <GridItem colSpan={[12, 12, 6]}>
           <Stack spacing={4}>
             <Heading size="lg">
-              I&apos;m a Computer Science and Business student{" "}
+              In conclusion,{" "}
               <chakra.span color={HighlightText}>
-                with a background in Design
+                I&apos;m here to learn
               </chakra.span>
             </Heading>
             <Text color={BodyText}>
@@ -34,15 +34,10 @@ export const ShortSection = () => {
               build across engineering, design, and business
             </Text>
             <Text color={BodyText}>
-              Beyond the resume, I&apos;m someone who looks on the positive side
-              of things, is always up for a challenge, sweats the details, and
-              values personal growth above all else
-            </Text>
-            <Text color={BodyText}>
               I&apos;ve got a lot more to share, and would love to chat about
               potential internship opportunities - let&apos;s work together!
             </Text>
-            <Stack direction="row">
+            <Stack direction="row" spacing={4} pt={4}>
               <Button
                 colorScheme="blue"
                 w="fit-content"
@@ -67,7 +62,9 @@ export const ShortSection = () => {
         <GridItem colSpan={[12, 12, 6]} w="100%" h="100%">
           <Box bg={CardBg} borderRadius="lg" p={8}>
             <Stack>
-              <Text fontWeight="bold">Fun facts</Text>
+              <Text fontWeight="bold" pb={4}>
+                Fun facts
+              </Text>
               <Text color={CardText}>Tech and gadget enthusiast</Text>
               <Text color={CardText}>
                 Favorite fruit is{" "}

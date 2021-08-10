@@ -7,9 +7,7 @@ import {
   Stack,
   Container,
   AspectRatio,
-  Flex,
-  Spacer,
-  Link,
+  Circle,
 } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { chakra } from "@chakra-ui/system";
@@ -17,9 +15,6 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 import { useInView } from "react-intersection-observer";
 
-import Image from "next/image";
-
-import { ThemeToggle } from "../../components/layout/ThemeToggle";
 import { AnimateChild } from "components/animation";
 import { easeProps } from "components/animation/variants";
 import { MotionBox } from "../../components/motion";
@@ -32,6 +27,7 @@ export const HeroSection = () => {
 
   const blueGradient = useColorModeValue("blue.100", "blue.800");
   const purpleGradient = useColorModeValue("purple.200", "purple.800");
+  const purpleCircle = useColorModeValue("purple.100", "purple.700");
 
   const isSmallScreen = useBreakpointValue({ base: true, md: false });
 
@@ -81,19 +77,29 @@ export const HeroSection = () => {
                 </Text>
               </AnimateChild>
               <AnimateChild>
-                <Stack direction="row">
+                <Stack direction="row" spacing={4}>
                   <Button colorScheme="blue">Let&apos;s chat!</Button>
                   <Button variant="ghost">PDF Resume</Button>
                 </Stack>
               </AnimateChild>
             </Stack>
           </GridItem>
-          <GridItem colSpan={[12, 12, 5]}>
-            <AspectRatio ratio={9 / 16}>
-              <Box bg="blue.200" h="full" w="full">
-                <p>Hello</p>
-              </Box>
-            </AspectRatio>
+          <GridItem colSpan={[12, 12, 5]} position="relative">
+            <AnimateChild>
+              <AspectRatio ratio={9 / 16}>
+                <Box bg="blue.200" w="90%" borderRadius="lg" zIndex={9999}>
+                  <p>Hello</p>
+                </Box>
+              </AspectRatio>
+            </AnimateChild>
+            <Circle
+              size="30vh"
+              bg={purpleCircle}
+              position="absolute"
+              bottom="-20"
+              right="-40"
+              zIndex={0}
+            />
           </GridItem>
         </Grid>
       </Container>

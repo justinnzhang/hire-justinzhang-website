@@ -9,7 +9,9 @@ import {
   ValuesSection,
   SkillsSection,
   ShortSection,
+  FinalSection,
 } from "../sections";
+import { FacebookWarning } from "../components/FacebookWarning";
 
 function isFacebookApp() {
   if (
@@ -24,8 +26,6 @@ function isFacebookApp() {
 const Home = () => {
   const [isTLDR, setIsTLDR] = useBoolean(false);
 
-  console.log("isFacebookApp", isFacebookApp());
-
   const contentMarkup = isTLDR ? (
     <ShortSection />
   ) : (
@@ -34,13 +34,14 @@ const Home = () => {
       <ValuesSection />
       <SkillsSection />
       <WorkSection />
+      <FinalSection />
     </>
   );
 
   return (
     <Box w="full">
+      {isFacebookApp() && <FacebookWarning />}
       <HeroSection />
-      {isFacebookApp() && "THIS IS FACEBOOK"}
       <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
       {contentMarkup}
     </Box>

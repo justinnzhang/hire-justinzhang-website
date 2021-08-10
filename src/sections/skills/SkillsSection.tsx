@@ -21,7 +21,7 @@ interface SkillsSnippetProps {
 }
 
 const SkillsSnippet = ({ title, body }: SkillsSnippetProps) => {
-  const BodyText = useColorModeValue("gray.600", "gray.400");
+  const BodyText = useColorModeValue("gray.600", "gray.300");
 
   return (
     <Stack>

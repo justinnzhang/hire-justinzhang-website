@@ -15,7 +15,7 @@ import Image from "next/image";
 import { TextStack } from "../../components/text-animations";
 
 export const ValuesSection = () => {
-  const BodyText = useColorModeValue("gray.600", "gray.400");
+  const BodyText = useColorModeValue("gray.600", "gray.300");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
 
   return (
@@ -43,17 +43,19 @@ export const ValuesSection = () => {
               </Heading>
               <Text color={BodyText}>
                 I&apos;m a firm believer in experimentation and exploring new
-                things, taking calculated risks and letting my creativity shine
+                things, taking on new challenges while applying creative
+                thinking
               </Text>
               <Text color={BodyText}>
-                Collaboration is an essential piece of how I work, bouncing new
-                ideas and supporting others in helping them grow, or learning
-                from their unique persepectives and opinions
+                Impact and mentorship are also things that I care about, whether
+                that&apos;s learning from others or passing on my experiences -
+                at the end of the day, I want to leave a positive impact in any
+                way I can
               </Text>
               <Text fontWeight="medium" color={HighlightText}>
-                I recognize that I&apos;m still very early in my career and have
-                a lot to learn - hence I heavily value personal and professional
-                growth!
+                I&apos;m still very early in my career and have a lot to
+                understand - hence I heavily value personal and professional
+                growth above all else!
               </Text>
             </Stack>
           </GridItem>

@@ -65,7 +65,8 @@ export const TLDRSection = ({ setIsTLDR, isTLDR }: Props) => {
                 TLDR Mode
               </Heading>
               <Text size="md" color={BodyText}>
-                Skip the fluff and condense the site into a skimmable page
+                Skip the fluff and condense the whole site into a skimmable
+                section
               </Text>
             </Stack>
           </Flex>

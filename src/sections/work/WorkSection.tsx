@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 
 import { Container, Box, Center, SimpleGrid } from "@chakra-ui/layout";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/tabs";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
 import { useInView } from "react-intersection-observer";
+import useDraggableScroll from "use-draggable-scroll";
 
 import { WorkCard } from "./components";
 import { MotionBox } from "../../components/motion";
@@ -27,8 +28,19 @@ const CardGrid = ({
   children: ReactNode;
   isSmall?: boolean;
 }) => {
+  const dragRef = useRef(null);
+  const { onMouseDown } = useDraggableScroll(dragRef);
+
   if (isSmall) {
-    return <Box className="horizontal-scroll">{children}</Box>;
+    return (
+      <Box
+        className="horizontal-scroll"
+        ref={dragRef}
+        onMouseDown={onMouseDown}
+      >
+        {children}
+      </Box>
+    );
   } else {
     return (
       <SimpleGrid columns={2} spacing={8} pr={4} pl={4}>
