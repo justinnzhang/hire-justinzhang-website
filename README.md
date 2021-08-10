@@ -18,6 +18,7 @@ I've always believed in learning through doing and challenging myself to try new
 - [Chakra-UI](https://chakra-ui.com/)
 - [Framer Motion Animation Library](https://www.framer.com/docs/)
 - Deployed on [Vercel](https://vercel.com/)
+- [Figma Exploration](https://www.figma.com/file/IpkPhHox2Z6o1Hn2kCgwPJ/Site-Mockups?node-id=0%3A1)
 
 ### 💡 Comments, feedback, wanted to fix something?
 - Feel free to leave a post in the discussion tab or make a PR!
