@@ -52,6 +52,7 @@ export const HeroSection = () => {
       initial="initial"
       animate={inView ? "enter" : "initial"}
       exit="initial"
+      overflow="hidden"
     >
       <Container maxWidth="container.lg">
         <Grid

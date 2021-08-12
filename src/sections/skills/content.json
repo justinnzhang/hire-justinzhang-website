@@ -1,0 +1,27 @@
+[
+  {
+    "style": "HEADING",
+    "text": "Design driven, customer obsessed,",
+    "textEmp": "and long-term focused"
+  },
+  {
+    "style": "BADGE",
+    "badgeText": "LANGUAGES - THE TECHNICAL KIND :)",
+    "text": "Javascript (Typescript), Java, Python, SQL"
+  },
+  {
+    "style": "BADGE",
+    "badgeText": "PRODUCT",
+    "text": "User interviews, Product requirement docs, Writing user stories, Market analysis, Prioritization, Being helpful!"
+  },
+  {
+    "style": "BADGE",
+    "badgeText": "FRAMEWORKS AND TECHNICAL",
+    "text": "Node.js, React.js, Next.js, GraphQL, MongoDB, AWS (EC2, S3, Lambda, Cognito, Cloudfront)"
+  },
+  {
+    "style": "BADGE",
+    "badgeText": "SOFTWARE TOOLS",
+    "text": "Figma, Jira, Datadog, Adobe CC (Premiere, After Effects, Lightroom), Googling"
+  }
+]

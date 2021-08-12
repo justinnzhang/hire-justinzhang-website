@@ -13,9 +13,23 @@ import { TextRow } from "components/text-animations";
 import { AnimateChild } from "components/animation/StaggeredAnimation";
 import { easeProps } from "components/animation/variants";
 
-import content from "./content/all.content.json";
+import content from "./content.json";
 
 const WORK_TYPES = ["current", "work", "ec"];
+const PARENT_ANIMATION_VARIANTS = {
+  initial: {
+    opacity: 1,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      ease: easeProps,
+      staggerChildren: 0.05,
+      when: "beforeChildren",
+    },
+  },
+};
 
 function filteredContent(searchTag: string) {
   return content.filter((el) => el.tags.includes(searchTag));
@@ -75,23 +89,15 @@ export const WorkSection = () => {
         <Center w="100%" pb={16}>
           <TextRow lines={4} word="WHAT I DO" />
         </Center>
-        <Tabs variant="soft-rounded" colorScheme="blue" isLazy defaultIndex={0}>
+        <Tabs
+          variant="solid-rounded"
+          colorScheme="blue"
+          isLazy
+          defaultIndex={0}
+        >
           <MotionBox
             ref={ref2}
-            variants={{
-              initial: {
-                opacity: 1,
-              },
-              enter: {
-                opacity: 1,
-                transition: {
-                  duration: 0.1,
-                  ease: easeProps,
-                  staggerChildren: 0.15,
-                  when: "beforeChildren",
-                },
-              },
-            }}
+            variants={PARENT_ANIMATION_VARIANTS}
             initial="initial"
             animate={inView2 ? "enter" : "initial"}
             exit="initial"
@@ -109,20 +115,7 @@ export const WorkSection = () => {
               <TabPanel pr={0} pl={0} pt={8} key={`${el}-tabPanel`}>
                 <MotionBox
                   ref={ref}
-                  variants={{
-                    initial: {
-                      opacity: 1,
-                    },
-                    enter: {
-                      opacity: 1,
-                      transition: {
-                        duration: 0.1,
-                        ease: easeProps,
-                        staggerChildren: 0.1,
-                        when: "beforeChildren",
-                      },
-                    },
-                  }}
+                  variants={PARENT_ANIMATION_VARIANTS}
                   initial="initial"
                   animate={inView ? "enter" : "initial"}
                   exit="initial"

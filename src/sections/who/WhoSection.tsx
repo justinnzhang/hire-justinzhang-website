@@ -1,23 +1,18 @@
 import {
   Box,
   Container,
-  Heading,
-  Text,
   Stack,
   Grid,
   GridItem,
   Center,
 } from "@chakra-ui/layout";
-import { chakra } from "@chakra-ui/system";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
 import { TextStack } from "../../components/text-animations";
+import { ContentGenerator } from "components/text-section";
+import content from "./content.json";
 
 export const WhoSection = () => {
-  const BodyText = useColorModeValue("gray.600", "gray.300");
-  const HighlightText = useColorModeValue("blue.500", "blue.300");
-
   return (
     <Box>
       <Container maxW="container.lg">
@@ -35,26 +30,7 @@ export const WhoSection = () => {
           </GridItem>
           <GridItem colSpan={[12, 6, 6]}>
             <Stack spacing={4}>
-              <Heading size="lg">
-                A Computer Science and Business student{" "}
-                <chakra.span color={HighlightText}>
-                  with a background in Design
-                </chakra.span>
-              </Heading>
-              <Text color={BodyText}>
-                I started out in Film Studies before transitioning into my
-                current program - driven by a curiousity of building products as
-                a whole
-              </Text>
-              <Text color={BodyText}>
-                Making things a reality is my passion; whether that’s in
-                videography, software development, or even dreaming up new
-                business ideas
-              </Text>
-              <Text fontWeight="medium" color={HighlightText}>
-                That’s why I’m interested in Product Management, a way for me to
-                build things across engineering, business, and design
-              </Text>
+              <ContentGenerator content={content} name="who-section" />
             </Stack>
           </GridItem>
         </Grid>

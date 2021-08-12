@@ -48,15 +48,27 @@ const BUILD_LINKS = [
   {
     content: (
       <Text>
-        <ChakraLink isExternal href="https://reactjs.org/">
+        <ChakraLink
+          isExternal
+          href="https://reactjs.org/"
+          textDecorationLine="underline"
+        >
           React.js
         </ChakraLink>{" "}
         +{" "}
-        <ChakraLink isExternal href="https://nextjs.org/">
+        <ChakraLink
+          isExternal
+          href="https://nextjs.org/"
+          textDecorationLine="underline"
+        >
           Next.js
         </ChakraLink>{" "}
         +{" "}
-        <ChakraLink isExternal href="https://www.typescriptlang.org/">
+        <ChakraLink
+          isExternal
+          href="https://www.typescriptlang.org/"
+          textDecorationLine="underline"
+        >
           Typescript
         </ChakraLink>
       </Text>
@@ -65,7 +77,11 @@ const BUILD_LINKS = [
   {
     content: (
       <Text>
-        <ChakraLink isExternal href="https://chakra-ui.com/">
+        <ChakraLink
+          isExternal
+          href="https://chakra-ui.com/"
+          textDecorationLine="underline"
+        >
           Chakra UI
         </ChakraLink>
       </Text>
@@ -74,7 +90,11 @@ const BUILD_LINKS = [
   {
     content: (
       <Text>
-        <ChakraLink isExternal href="https://www.framer.com/docs/">
+        <ChakraLink
+          isExternal
+          href="https://www.framer.com/docs/"
+          textDecorationLine="underline"
+        >
           Framer Motion Animation Library
         </ChakraLink>
       </Text>
@@ -84,7 +104,11 @@ const BUILD_LINKS = [
     content: (
       <Text>
         Deployed on{" "}
-        <ChakraLink isExternal href="https://vercel.com/">
+        <ChakraLink
+          isExternal
+          href="https://vercel.com/"
+          textDecorationLine="underline"
+        >
           Vercel
         </ChakraLink>
       </Text>
@@ -96,8 +120,22 @@ const BUILD_LINKS = [
         <ChakraLink
           isExternal
           href="https://www.figma.com/file/IpkPhHox2Z6o1Hn2kCgwPJ/Site-Mockups?node-id=0%3A1"
+          textDecorationLine="underline"
         >
           Figma Exploration
+        </ChakraLink>
+      </Text>
+    ),
+  },
+  {
+    content: (
+      <Text>
+        <ChakraLink
+          isExternal
+          href="https://github.com/justinnzhang/hire-justinzhang-website"
+          textDecorationLine="underline"
+        >
+          Github Repository
         </ChakraLink>
       </Text>
     ),
