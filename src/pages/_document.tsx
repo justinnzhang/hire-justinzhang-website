@@ -35,8 +35,18 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/app-icon.png" /> */}
           <link rel="manifest" href="/manifest.json" />
           <script
-            defer
-            src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          ></script>
+          <script
+            async
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`,
+            }}
           />
         </Head>
         <body>
