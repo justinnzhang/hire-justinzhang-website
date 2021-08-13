@@ -31,8 +31,8 @@ export const WarningModal = ({
           <ModalCloseButton />
           <ModalBody>
             <Text>
-              For the best experience, please open this site in Safari, Chrome
-              or Chromium-based Browsers!
+              For the best experience, please open this site in Safari, Chrome,
+              or Chromium-based browsers!
             </Text>
           </ModalBody>
           <ModalFooter>
