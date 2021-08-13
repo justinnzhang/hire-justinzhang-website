@@ -25,7 +25,7 @@ interface AnimateChildProps {
 export const AnimateChild = ({
   children,
   direction = "up",
-  className,
+  className = "",
 }: AnimateChildProps) => {
   switch (direction) {
     case "up":
@@ -119,7 +119,7 @@ export const AnimateParent = ({
       exit="initial"
       style={{ backgroundColor: debugMessage ? "grey" : "none" }}
     >
-      <main>{children}</main>
+      {children}
     </motion.div>
   );
 };

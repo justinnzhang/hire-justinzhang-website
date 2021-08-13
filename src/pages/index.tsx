@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Box } from "@chakra-ui/layout";
 import { useBoolean } from "@chakra-ui/hooks";
 
@@ -13,7 +14,7 @@ import {
   ShortSection,
   FinalSection,
 } from "../sections";
-import { FacebookWarning, SamsungWarning } from "../components/warnings";
+import { WarningModal } from "../components/warnings";
 
 import companies from "../constants/companies.content.json";
 
@@ -44,7 +45,16 @@ function isSamsungBrowser() {
     typeof window !== "undefined" &&
     typeof window.navigator !== "undefined"
   ) {
-    return navigator.userAgent.match(/SamsungBrowser/i);
+    var ua = navigator.userAgent || navigator.vendor;
+    return ua.indexOf("SamsungBrowser") > -1;
+  }
+}
+
+function getBrowserType() {
+  if (isFacebookApp()) {
+    return "The Facebook in-app";
+  } else if (isSamsungBrowser()) {
+    return "Samsung's default";
   }
 }
 
@@ -53,6 +63,9 @@ const Home = () => {
   const { hi } = router.query;
 
   const [isTLDR, setIsTLDR] = useBoolean(false);
+  const [open, setOpen] = useState(
+    isSamsungBrowser() || isFacebookApp() || false
+  );
 
   const selectedCompany = companyFilter(hi);
 
@@ -70,8 +83,11 @@ const Home = () => {
 
   return (
     <Box w="full">
-      {isFacebookApp() && <FacebookWarning />}
-      {isSamsungBrowser() && <SamsungWarning />}
+      <WarningModal
+        open={open}
+        setOpen={setOpen}
+        typeOfBrowser={getBrowserType()}
+      />
       <HeroSection companyItem={selectedCompany} />
       <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
       {contentMarkup}

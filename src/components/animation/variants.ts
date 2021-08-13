@@ -9,7 +9,22 @@ export const animatedParent = {
     transition: {
       duration: 0.1,
       ease: easeProps,
-      staggerChildren: 0.333,
+      staggerChildren: 0.15,
+      when: "beforeChildren",
+    },
+  },
+};
+
+export const animatedParentShort = {
+  initial: {
+    opacity: 1,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      ease: easeProps,
+      staggerChildren: 0.05,
       when: "beforeChildren",
     },
   },

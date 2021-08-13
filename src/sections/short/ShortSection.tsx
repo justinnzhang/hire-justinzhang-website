@@ -31,7 +31,7 @@ export const ShortSection = ({ companyItem }: Props) => {
                     colorScheme="blue"
                     w="fit-content"
                     as={Link}
-                    href="mailto:hirejustinzhang@gmail.com"
+                    href={REAL_EMAIL}
                     isExternal
                   >
                     Let&apos;s get in touch!

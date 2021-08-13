@@ -65,11 +65,9 @@ export const ContentGenerator = ({
   return (
     <>
       {content.map((element, index) => (
-        <div key={`${name}-${index}`}>
-          <AnimatedWrapper isAnimated={isAnimated}>
-            <TypeSelector element={element} />
-          </AnimatedWrapper>
-        </div>
+        <AnimatedWrapper isAnimated={isAnimated} key={`${name}-${index}`}>
+          <TypeSelector element={element} />
+        </AnimatedWrapper>
       ))}
     </>
   );

@@ -11,8 +11,8 @@ export const BadgeText = ({ text, badgeText }: Props) => {
 
   return (
     <Stack>
-      <Badge w="fit-content">{text}</Badge>
-      <Text color={BodyText}>{badgeText}</Text>
+      <Badge w="fit-content">{badgeText}</Badge>
+      <Text color={BodyText}>{text}</Text>
     </Stack>
   );
 };
