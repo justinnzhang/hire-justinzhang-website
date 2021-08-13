@@ -19,7 +19,29 @@ import { AnimateChild } from "components/animation";
 import { easeProps } from "components/animation/variants";
 import { MotionBox } from "../../components/motion";
 
-export const HeroSection = () => {
+import { REAL_EMAIL, RESUME_LINK } from "../../constants";
+import { Link } from "@chakra-ui/react";
+
+const PARENT_VARIANTS = {
+  initial: {
+    opacity: 1,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      ease: easeProps,
+      staggerChildren: 0.15,
+      when: "beforeChildren",
+    },
+  },
+};
+
+interface Props {
+  companyItem?: SiteOption;
+}
+
+export const HeroSection = ({ companyItem }: Props) => {
   const [ref, inView] = useInView({
     rootMargin: `-250px 0px`,
     triggerOnce: true,
@@ -35,26 +57,14 @@ export const HeroSection = () => {
     <MotionBox
       bgGradient={`linear(to-r,${blueGradient}, ${purpleGradient})`}
       ref={ref}
-      variants={{
-        initial: {
-          opacity: 1,
-        },
-        enter: {
-          opacity: 1,
-          transition: {
-            duration: 0.1,
-            ease: easeProps,
-            staggerChildren: 0.15,
-            when: "beforeChildren",
-          },
-        },
-      }}
+      variants={PARENT_VARIANTS}
       initial="initial"
       animate={inView ? "enter" : "initial"}
       exit="initial"
       overflow="hidden"
     >
       <Container maxWidth="container.lg">
+        <Box h="3.5rem" />
         <Grid
           templateColumns="repeat(12, 1fr)"
           gap={6}
@@ -65,7 +75,14 @@ export const HeroSection = () => {
             <Stack spacing={8}>
               <AnimateChild>
                 <Heading as="h1" size="lg">
-                  Hi! My name is Justin Zhang and I&apos;m seeking{" "}
+                  Hey
+                  {companyItem ? (
+                    <chakra.span textTransform="capitalize">
+                      {" "}
+                      {companyItem.company}
+                    </chakra.span>
+                  ) : null}
+                  ! My name is Justin Zhang and I&apos;m seeking{" "}
                   <chakra.span color="blue.500">
                     Product Management internships
                   </chakra.span>{" "}
@@ -79,8 +96,21 @@ export const HeroSection = () => {
               </AnimateChild>
               <AnimateChild>
                 <Stack direction="row" spacing={4}>
-                  <Button colorScheme="blue">Let&apos;s chat!</Button>
-                  <Button variant="ghost">PDF Resume</Button>
+                  <Button
+                    colorScheme="blue"
+                    href={`mailto:${REAL_EMAIL}`}
+                    as={Link}
+                  >
+                    Let&apos;s chat!
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    as={Link}
+                    isExternal
+                    href={companyItem?.resumeLink || RESUME_LINK}
+                  >
+                    {companyItem?.resumeLink ? "Themed" : "PDF"} Resume
+                  </Button>
                 </Stack>
               </AnimateChild>
             </Stack>

@@ -7,8 +7,13 @@ import { FunFacts } from "components/fun-facts";
 import { ContentGenerator } from "components/text-section";
 
 import content from "./content.json";
+import { RESUME_LINK, REAL_EMAIL } from "../../constants";
 
-export const ShortSection = () => {
+interface Props {
+  companyItem?: SiteOption;
+}
+
+export const ShortSection = ({ companyItem }: Props) => {
   return (
     <AnimateParent stagger={0.05}>
       <Container maxW="container.lg" pt={16} pb={16} position="relative">
@@ -34,11 +39,11 @@ export const ShortSection = () => {
                   <Button
                     w="fit-content"
                     as={Link}
-                    href="mailto:hirejustinzhang@gmail.com"
+                    href={companyItem?.resumeLink || RESUME_LINK}
                     isExternal
                     variant="ghost"
                   >
-                    PDF Resume
+                    {companyItem?.resumeLink ? "Themed" : "PDF"} Resume
                   </Button>
                 </Stack>
               </AnimateChild>

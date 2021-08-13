@@ -6,3 +6,10 @@ declare interface ContentItem {
 }
 
 declare type Content = ContentItem[];
+
+declare interface SiteOption {
+  company?: string;
+  resumeLink?: string;
+}
+
+declare type SiteOptionlist = SiteOption[];

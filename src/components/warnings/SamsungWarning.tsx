@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box, Container, Stack, Text, Heading } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 
-export const FacebookWarning = () => {
+export const SamsungWarning = () => {
   const [open, setOpen] = useState(true);
 
   if (open) {
@@ -17,14 +17,14 @@ export const FacebookWarning = () => {
         className="adaptive-glass"
       >
         <Container maxW="container.lg" p={8}>
-          <Stack spacing={4}>
+          <Stack spacing={4} direction="column">
             <Heading size="md">
-              Facebook in-app browser breaks my site 😥
+              Samsung default browser breaks my site 😥
             </Heading>
 
             <Text>
-              For the best experience, open this site in your device&apos;s
-              default browser!
+              For the best experience, please open this site on your desktop
+              computer or other browser!
             </Text>
 
             <Button

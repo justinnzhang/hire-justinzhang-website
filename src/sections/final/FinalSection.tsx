@@ -6,9 +6,14 @@ import { FunFacts } from "components/fun-facts";
 import { AnimateParent, AnimateChild } from "components/animation";
 import { ContentGenerator } from "components/text-section";
 
+import { REAL_EMAIL, RESUME_LINK } from "../../constants";
 import content from "./content.json";
 
-export const FinalSection = () => {
+interface Props {
+  companyItem?: SiteOption;
+}
+
+export const FinalSection = ({ companyItem }: Props) => {
   return (
     <AnimateParent stagger={0.05} rX="-100px">
       <Container maxW="container.lg" pb={16} position="relative">
@@ -26,19 +31,18 @@ export const FinalSection = () => {
                     colorScheme="blue"
                     w="fit-content"
                     as={Link}
-                    href="mailto:hirejustinzhang@gmail.com"
+                    href={`mailto:${REAL_EMAIL}`}
                     isExternal
                   >
                     Let&apos;s get in touch!
                   </Button>
                   <Button
-                    w="fit-content"
-                    as={Link}
-                    href="mailto:hirejustinzhang@gmail.com"
-                    isExternal
                     variant="ghost"
+                    as={Link}
+                    isExternal
+                    href={companyItem?.resumeLink || RESUME_LINK}
                   >
-                    PDF Resume
+                    {companyItem?.resumeLink ? "Themed" : "PDF"} Resume
                   </Button>
                 </Stack>
               </AnimateChild>

@@ -20,14 +20,12 @@ interface Props {
 const AnimatedWrapper = ({
   children,
   isAnimated,
-  key,
 }: {
   children: ReactNode;
   isAnimated: boolean;
-  key: string;
 }) => {
   if (isAnimated) {
-    return <AnimateChild key={key}>{children}</AnimateChild>;
+    return <AnimateChild>{children}</AnimateChild>;
   } else {
     return <>{children}</>;
   }
@@ -67,9 +65,11 @@ export const ContentGenerator = ({
   return (
     <>
       {content.map((element, index) => (
-        <AnimatedWrapper key={`${name}-${index}`} isAnimated={isAnimated}>
-          <TypeSelector element={element} />
-        </AnimatedWrapper>
+        <div key={`${name}-${index}`}>
+          <AnimatedWrapper isAnimated={isAnimated}>
+            <TypeSelector element={element} />
+          </AnimatedWrapper>
+        </div>
       ))}
     </>
   );

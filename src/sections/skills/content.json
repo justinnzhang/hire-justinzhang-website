@@ -12,7 +12,7 @@
   {
     "style": "BADGE",
     "badgeText": "PRODUCT",
-    "text": "User interviews, Product requirement docs, Writing user stories, Market analysis, Prioritization, Being helpful!"
+    "text": "User interviews, Product requirement docs, User stories, Market analysis, Prioritization, Being helpful!"
   },
   {
     "style": "BADGE",
@@ -22,6 +22,6 @@
   {
     "style": "BADGE",
     "badgeText": "SOFTWARE TOOLS",
-    "text": "Figma, Jira, Datadog, Adobe CC (Premiere, After Effects, Lightroom), Googling"
+    "text": "Figma, Jira, Datadog, Adobe CC (Premiere, After Effects, Lightroom), Googling & StackOverFlow"
   }
 ]

@@ -1,8 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const APP_NAME = "Hire Justin Zhang";
+const APP_NAME = "Hire Justin Zhang The Intern";
 const APP_DESCRIPTION =
-  "I am a CS and Business student seeking Product Management Internships!";
+  "Looking for Summer 2022 Product Management Internships - I'm a Computer Science and Business student ready for a challenge!";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {

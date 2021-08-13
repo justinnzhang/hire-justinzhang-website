@@ -1,7 +1,5 @@
-import { Box, Flex, Link, Spacer } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import { ReactNode } from "react";
-
-import Image from "next/image";
 
 import Footer from "./Footer";
 import Meta from "./Meta";
@@ -15,8 +13,10 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <Box transition="0.3s all ease-out" id="top">
       <Meta />
-      <Header />
-      <Box as="main">{children}</Box>
+      <Box as="main">
+        <Header />
+        {children}
+      </Box>
       <Footer />
     </Box>
   );

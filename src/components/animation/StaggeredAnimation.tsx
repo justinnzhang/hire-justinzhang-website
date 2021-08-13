@@ -9,7 +9,6 @@ import {
   fadeUpChild,
   easeProps,
 } from "./variants";
-import { debug } from "webpack";
 
 interface AnimateChildProps {
   children: React.ReactNode;

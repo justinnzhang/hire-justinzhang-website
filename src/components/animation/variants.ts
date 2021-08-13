@@ -18,7 +18,7 @@ export const animatedParent = {
 export const fadeUpChild = {
   initial: {
     opacity: 0,
-    translateY: 20,
+    translateY: 10,
   },
   enter: {
     opacity: 1,
