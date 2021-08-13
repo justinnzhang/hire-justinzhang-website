@@ -1,11 +1,15 @@
 [
   {
     "company": "discord",
-    "resumeLink": "https://doixzan7hf4ti.cloudfront.net/other/JustinZhangDiscord.pdf"
+    "resumeLink": "https://doixzan7hf4ti.cloudfront.net/resumes/JustinZhangDiscordPublic.pdf"
   },
   {
     "company": "datadog",
-    "resumeLink": "https://doixzan7hf4ti.cloudfront.net/other/JustinZhangDatadog.pdf"
+    "resumeLink": "https://doixzan7hf4ti.cloudfront.net/resumes/JustinZhangDatadogPublic.pdf"
+  },
+  {
+    "company": "stripe",
+    "resumeLink": "https://doixzan7hf4ti.cloudfront.net/resumes/JustinZhangStripePublic.pdf"
   },
   {}
 ]
