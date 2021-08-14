@@ -135,7 +135,7 @@ export const HeroSection = ({ companyItem }: Props) => {
                   borderWidth="5px"
                   zIndex={9999}
                 >
-                  <Stack textAlign="center">
+                  {/* <Stack textAlign="center">
                     <Image
                       src="/static/memoji-peace.png"
                       alt="Memoji representation of Justin Zhang putting two fingers up in a v-shape"
@@ -143,7 +143,14 @@ export const HeroSection = ({ companyItem }: Props) => {
                       height="200rem"
                     />
                     <Text>Video coming soon</Text>
-                  </Stack>
+                  </Stack> */}
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/qRtxzKQm0QM?playlist=qRtxzKQm0QM&loop=1&modestbranding=1&controls=1&playsinline=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    height="100%"
+                    width="100%"
+                  ></iframe>
                 </Box>
               </AspectRatio>
             </AnimateChild>
