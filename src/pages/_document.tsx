@@ -1,9 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 const APP_NAME = "Hire Justin Zhang The Intern";
-const APP_DESCRIPTION =
-  "Looking for Summer 2022 Product Management Internships - I'm a Computer Science and Business student ready for a challenge!";
-
+const PREVIEW_IMAGE = "/preview-image.png";
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -21,10 +19,9 @@ class MyDocument extends Document {
             content="default"
           />
           <meta name="apple-mobile-web-app-title" content={APP_NAME} />
-          <meta name="description" content={APP_DESCRIPTION} />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="theme-color" content="#FFFFFF" />
+          <meta name="theme-color" content="#3182CE" />
 
           {/* add your own app-icon */}
           {/* <link
@@ -50,6 +47,46 @@ class MyDocument extends Document {
           `,
             }}
           />
+
+          <meta
+            name="description"
+            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+          />
+
+          <meta itemProp="name" content="Hire Justin Zhang The Intern" />
+          <meta
+            itemProp="description"
+            content="I'm a 4th year Computer Science and Business student seeking Product Management internships for Summer 2022"
+          />
+          <meta itemProp="image" content={PREVIEW_IMAGE} />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@justinnzhang" />
+          <meta name="twitter:title" content="Hire Justin Zhang The Intern" />
+          <meta
+            name="twitter:description"
+            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+          />
+          <meta name="twitter:creator" content="@justinnzhang" />
+          <meta name="twitter:image" content={PREVIEW_IMAGE} />
+          <meta
+            name="twitter:image:alt"
+            content="Blue to purple gradient with the text: Seeking Summer 2022 Product Management Internships, An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
+          />
+
+          <meta property="og:title" content="Hire Justin Zhang The Intern" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://hirejustinzhang.com" />
+          <meta property="og:image:url" content={PREVIEW_IMAGE} />
+          <meta
+            property="og:image:alt"
+            content="Blue to purple gradient with the text: Seeking Summer 2022 Product Management Internships, An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
+          />
+          <meta
+            property="og:description"
+            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+          />
+          <meta property="og:site_name" content="Hire Justin Zhang" />
         </Head>
         <body>
           <Main />
