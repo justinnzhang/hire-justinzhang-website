@@ -77,6 +77,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="Hire Justin Zhang The Intern" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://hirejustinzhang.com" />
+          <meta property="og:image" content={PREVIEW_IMAGE} />
           <meta property="og:image:url" content={PREVIEW_IMAGE} />
           <meta
             property="og:image:alt"
