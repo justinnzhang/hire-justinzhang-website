@@ -50,7 +50,7 @@ class MyDocument extends Document {
 
           <meta
             name="description"
-            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Management internships."
           />
 
           <meta itemProp="name" content="Hire Justin Zhang The Intern" />
@@ -65,7 +65,7 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Hire Justin Zhang The Intern" />
           <meta
             name="twitter:description"
-            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Management internships."
           />
           <meta name="twitter:creator" content="@justinnzhang" />
           <meta name="twitter:image" content={PREVIEW_IMAGE} />
@@ -84,7 +84,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="An interactive cover letter to showcase who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Manangement internships."
+            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Management internships."
           />
           <meta property="og:site_name" content="Hire Justin Zhang" />
         </Head>
