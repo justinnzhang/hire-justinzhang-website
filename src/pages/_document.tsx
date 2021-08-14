@@ -4,8 +4,6 @@ const APP_NAME = "Hire Justin Zhang The Intern";
 const APP_DESCRIPTION =
   "Looking for Summer 2022 Product Management Internships - I'm a Computer Science and Business student ready for a challenge!";
 
-const G_TAG = "G-3TRWSN5B90";
-
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -38,16 +36,18 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${G_TAG}`}
-          ></script>
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          />
           <script
-            async
             dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', ${G_TAG});`,
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
             }}
           />
         </Head>

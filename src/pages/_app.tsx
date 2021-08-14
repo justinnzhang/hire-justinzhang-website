@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
@@ -9,6 +11,21 @@ import customTheme from "styles/customTheme";
 import "styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: any) => {
+      // @ts-ignore
+      window.gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_path: url,
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ChakraProvider theme={customTheme}>
       <Head>
