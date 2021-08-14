@@ -60,7 +60,7 @@ function getBrowserType() {
 
 const Home = () => {
   const router = useRouter();
-  const { hi } = router.query;
+  const { hi, debug } = router.query;
 
   const [isTLDR, setIsTLDR] = useBoolean(false);
   const [open, setOpen] = useState(
@@ -68,6 +68,19 @@ const Home = () => {
   );
 
   const selectedCompany = companyFilter(hi);
+
+  console.log(
+    debug === "true"
+      ? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
+      : `   ________________________________________
+  < mooooooooooooooooooooooooooooooooooooo >
+   ----------------------------------------
+          \\   ^__^
+           \\  (oo)\\_______
+              (__)\\       )\\/\\
+                  ||----w |
+                  ||     ||`
+  );
 
   const contentMarkup = isTLDR ? (
     <ShortSection companyItem={selectedCompany} />
