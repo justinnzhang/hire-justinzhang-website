@@ -85,12 +85,12 @@ export const HeroSection = ({ companyItem }: Props) => {
             <Stack spacing={8}>
               <AnimateChild>
                 <Heading as="h1" size="lg">
-                  Hey{companyName}! My name is Justin Zhang and I&apos;m seeking{" "}
+                  Hey{companyName}! My name is Justin Zhang and I&apos;m seeking
+                  full time roles in{" "}
                   <chakra.span color={blueHighlight}>
-                    Product Management internships
+                    Product Management
                   </chakra.span>{" "}
-                  for{" "}
-                  <chakra.span color={pinkHighlight}>Summer 2022</chakra.span>
+                  in <chakra.span color={pinkHighlight}> 2023</chakra.span>
                 </Heading>
               </AnimateChild>
               <AnimateChild>

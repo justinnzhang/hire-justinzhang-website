@@ -1,5 +1,14 @@
 [
   {
+    "imageKey": "/logos/meta.png",
+    "title": "INTERNSHIP",
+    "dates": "May 2022 - Present",
+    "body1": "Technical-PM Intern at Meta on the Facebook App, Connected Commerce team.",
+    "body2": "Learning, growing, and experiencing my first time living in the United States.",
+    "logoAlt": "Meta Logo",
+    "tags": ["current", "work"]
+  },
+  {
     "imageKey": "/logos/casecom.png",
     "title": "STARTUP",
     "dates": "April 2020 - Present",
@@ -19,18 +28,18 @@
     "logoAlt": "Shopify logo, a green bag with a white S on the front",
     "ctaText": "Read about the launch",
     "ctaLink": "https://www.shopify.ca/partners/blog/shopify-online-store",
-    "tags": ["current", "work"]
+    "tags": ["work"]
   },
   {
     "imageKey": "/logos/hw.png",
     "title": "LEADERSHIP",
-    "dates": "April 2020 - Present",
+    "dates": "Feb 2019 - Feb 2022",
     "body1": "Co-director of Hack Western, one of Canada’s largest student-run hackathons.",
     "body2": "Now in my 3rd year on the team, working to bring event to 800+ students across the world - previously led product and design for the event.",
     "logoAlt": "Hack Western logo, a purple isometric horse",
     "ctaText": "Our website",
     "ctaLink": "https://hackwestern.com",
-    "tags": ["current", "ec"]
+    "tags": ["leadership"]
   },
   {
     "imageKey": "/logos/rbc.png",
@@ -68,16 +77,16 @@
     "body1": "Residence Orientation Leader (Frosh Leader).",
     "body2": "Lived on-campus to support over 60 students in their transition into their freshman year of university.",
     "logoAlt": "Western university logo, the purple university crest",
-    "tags": ["ec"]
+    "tags": ["leadership"]
   },
   {
     "imageKey": "/logos/western.png",
     "title": "MENTORSHIP",
     "dates": "Sept 2019 - Present",
     "body1": "Case competition and hackathon mentor for various events.",
-    "body2": "Providing resume help, technical help, and providing feedback on presentations.",
+    "body2": "Providing resume help, technical help, and helping more students break into the field.",
     "logoAlt": "Western university logo, the purple university crest",
-    "tags": ["ec"]
+    "tags": ["leadership"]
   },
   {
     "imageKey": "/logos/wfn.png",
@@ -88,6 +97,28 @@
     "logoAlt": "WFN logo, a dark background with purple and orange text that reads WFN",
     "ctaText": "My work",
     "ctaLink": "https://justinzhang.ca/w/wfn",
-    "tags": ["ec"]
+    "tags": ["leadership"]
+  },
+  {
+    "imageKey": "/logos/discord.png",
+    "title": "PROJECTS",
+    "dates": "Jan 2022 - May 2022",
+    "body1": "Presented a new feature to a senior Discord Product Lead.",
+    "body2": "Examined, explored, and prototyped while learning important Product Management fundamentals",
+    "logoAlt": "PerkUp logo with an illustration of a card on the left of the text",
+    "ctaText": "Slide Deck",
+    "ctaLink": "https://docs.google.com/presentation/d/1AFF-YpN2B98mLc4tSL-APGmtl56nE0gNtdk-XPpJCos/edit?usp=sharing",
+    "tags": ["projects"]
+  },
+  {
+    "imageKey": "/logos/perkup.png",
+    "title": "PROJECTS",
+    "dates": "Sept 2021 - April 2022",
+    "body1": "Product Consultant for PerkUp, an early stage startup redifining employee perks.",
+    "body2": "Performed product analysis, built Figma mockups, and helped to scope out product improvements",
+    "logoAlt": "PerkUp logo with an illustration of a card on the left of the text",
+    "ctaText": "Client Website",
+    "ctaLink": "https://www.perkupapp.com/",
+    "tags": ["projects"]
   }
 ]

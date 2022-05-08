@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
 
-import { Container, Box, Center, SimpleGrid } from "@chakra-ui/layout";
+import { Container, Box, Center, SimpleGrid, Badge } from "@chakra-ui/layout";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/tabs";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
@@ -15,7 +15,13 @@ import { easeProps } from "components/animation/variants";
 
 import content from "./content.json";
 
-const WORK_TYPES = ["current", "work", "ec"];
+const WORK_TYPES = [
+  { name: "Current", count: 2 },
+  { name: "Work", count: 6 },
+  { name: "Projects", count: 2 },
+  { name: "Leadership", count: 4 },
+];
+
 const PARENT_ANIMATION_VARIANTS = {
   initial: {
     opacity: 1,
@@ -104,15 +110,20 @@ export const WorkSection = () => {
           >
             <AnimateChild>
               <TabList pr={4} pl={4}>
-                <Tab>Current</Tab>
-                <Tab>Work</Tab>
-                <Tab>Leadership</Tab>
+                {WORK_TYPES.map((type) => (
+                  <Tab key={`experience-type-${type.name}`}>
+                    {type.name}
+                    <Badge ml={[4, 2]} colorScheme="whatsapp">
+                      {type.count}
+                    </Badge>
+                  </Tab>
+                ))}
               </TabList>
             </AnimateChild>
           </MotionBox>
           <TabPanels>
-            {WORK_TYPES.map((el) => (
-              <TabPanel pr={0} pl={0} pt={8} key={`${el}-tabPanel`}>
+            {WORK_TYPES.map((type) => (
+              <TabPanel pr={0} pl={0} pt={8} key={`${type}-tabPanel`}>
                 <MotionBox
                   ref={ref}
                   variants={PARENT_ANIMATION_VARIANTS}
@@ -121,9 +132,11 @@ export const WorkSection = () => {
                   exit="initial"
                 >
                   <CardGrid isSmall={isSmall}>
-                    {filteredContent(el).map((item, index) => (
-                      <WorkCard item={item} key={`${el}-${index}`} />
-                    ))}
+                    {filteredContent(type.name.toLowerCase()).map(
+                      (item, index) => (
+                        <WorkCard item={item} key={`${type.name}-${index}`} />
+                      )
+                    )}
                   </CardGrid>
                 </MotionBox>
               </TabPanel>

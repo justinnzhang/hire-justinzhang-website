@@ -19,7 +19,7 @@ interface WorkItem {
   logoAlt: string;
   ctaText?: string;
   ctaLink?: string;
-  tags: string[];
+  tags?: string[];
 }
 
 interface Props {
