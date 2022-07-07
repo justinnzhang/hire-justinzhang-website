@@ -1,6 +1,14 @@
 import { ReactNode, useRef } from "react";
 
-import { Container, Box, Center, SimpleGrid, Badge } from "@chakra-ui/layout";
+import {
+  Container,
+  Box,
+  Center,
+  SimpleGrid,
+  Badge,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/layout";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/tabs";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
@@ -110,14 +118,18 @@ export const WorkSection = () => {
           >
             <AnimateChild>
               <TabList pr={4} pl={4}>
-                {WORK_TYPES.map((type) => (
-                  <Tab key={`experience-type-${type.name}`}>
-                    {type.name}
-                    <Badge ml={[4, 2]} colorScheme="whatsapp">
-                      {type.count}
-                    </Badge>
-                  </Tab>
-                ))}
+                <Wrap>
+                  {WORK_TYPES.map((type) => (
+                    <WrapItem key={`experience-type-${type.name}`}>
+                      <Tab>
+                        {type.name}
+                        <Badge ml={[4, 2]} colorScheme="whatsapp">
+                          {type.count}
+                        </Badge>
+                      </Tab>
+                    </WrapItem>
+                  ))}
+                </Wrap>
               </TabList>
             </AnimateChild>
           </MotionBox>
