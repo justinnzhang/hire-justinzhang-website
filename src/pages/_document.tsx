@@ -74,7 +74,7 @@ class MyDocument extends Document {
             content="Blue to purple gradient with the text: Seeking full time roles in Product & Software Engineering, An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
           />
 
-          <meta property="og:title" content="Hire Justin Zhang The Intern" />
+          <meta property="og:title" content="Hire Justin Zhang" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://hirejustinzhang.com" />
           <meta property="og:image" content={PREVIEW_IMAGE} />
