@@ -58,9 +58,20 @@ function getBrowserType() {
   }
 }
 
+function getInterestedRoleSetting(role?: string | string[]) {
+  if (!role) return "p";
+  else if (role === "s") return "s";
+  else return "p";
+}
+
 const Home = () => {
   const router = useRouter();
-  const { hi } = router.query;
+
+  /**
+   * hi = Powers the custom company resume
+   * r = Toggles the site between SWE & Product
+   */
+  const { hi, r } = router.query;
 
   const [isTLDR, setIsTLDR] = useBoolean(false);
   const [open, setOpen] = useState(
@@ -99,7 +110,10 @@ const Home = () => {
         setOpen={setOpen}
         typeOfBrowser={getBrowserType()}
       />
-      <HeroSection companyItem={selectedCompany} />
+      <HeroSection
+        companyItem={selectedCompany}
+        interestedRole={getInterestedRoleSetting(r)}
+      />
       <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
       {contentMarkup}
     </Box>

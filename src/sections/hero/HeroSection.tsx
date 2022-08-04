@@ -15,7 +15,6 @@ import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 
 import { AnimateChild } from "components/animation";
 import { easeProps } from "components/animation/variants";
@@ -36,9 +35,10 @@ const CIRCLE_VARIANTS = {
 
 interface Props {
   companyItem?: SiteOption;
+  interestedRole?: RoleInterest;
 }
 
-export const HeroSection = ({ companyItem }: Props) => {
+export const HeroSection = ({ companyItem, interestedRole = "p" }: Props) => {
   const [ref, inView] = useInView({
     rootMargin: `-250px 0px`,
     triggerOnce: true,
@@ -58,6 +58,14 @@ export const HeroSection = ({ companyItem }: Props) => {
   ) : (
     ""
   );
+
+  const interestedRolesMarkup =
+    interestedRole === "s" ? "Software Engineering" : "Product Management";
+
+  const secondaryInterestedRolesMarkup =
+    interestedRole === "s"
+      ? "Product Management roles"
+      : "Software Engineering roles (Web/Front-end)";
 
   return (
     <MotionBox
@@ -86,16 +94,16 @@ export const HeroSection = ({ companyItem }: Props) => {
               <AnimateChild>
                 <Heading as="h1" size="lg">
                   Hey{companyName}! My name is Justin Zhang and I&apos;m seeking
-                  full time roles in{" "}
+                  new grad roles in{" "}
                   <chakra.span color={blueHighlight}>
-                    Product Management
+                    {interestedRolesMarkup}
                   </chakra.span>{" "}
                   in <chakra.span color={pinkHighlight}> 2023</chakra.span>
                 </Heading>
               </AnimateChild>
               <AnimateChild>
                 <Text colorScheme="gray">
-                  Also interested in Software Engineering roles (Web/Front-end)!
+                  Also interested in {secondaryInterestedRolesMarkup}!
                 </Text>
               </AnimateChild>
               <AnimateChild>

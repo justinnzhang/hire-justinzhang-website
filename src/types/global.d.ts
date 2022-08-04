@@ -12,4 +12,7 @@ declare interface SiteOption {
   resumeLink?: string;
 }
 
+// p = product, s = SWE
+declare type RoleInterest = "p" | "s";
+
 declare type SiteOptionlist = SiteOption[];
