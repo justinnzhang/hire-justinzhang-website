@@ -4,6 +4,9 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 
 import Image from "next/image";
 
+const DURIAN_IMAGE_LINK =
+  "https://www.google.com/search?q=durian&sxsrf=ALeKk03lX6LGG5MPefvOxxgUY-bAMZomsw:1628566732329&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjX48rsw6XyAhUHVN8KHUZsBn4Q_AUoAXoECAEQAw&cshid=1628566747467052&biw=2560&bih=1297&dpr=1.5";
+
 export const FunFacts = () => {
   const CardText = useColorModeValue("gray.500", "gray.400");
   const HighlightText = useColorModeValue("blue.500", "blue.300");
@@ -17,11 +20,7 @@ export const FunFacts = () => {
         </Text>
         <Text color={CardText}>
           Favorite fruit is{" "}
-          <Link
-            color={HighlightText}
-            isExternal
-            href="https://www.google.com/search?q=durian&sxsrf=ALeKk03lX6LGG5MPefvOxxgUY-bAMZomsw:1628566732329&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjX48rsw6XyAhUHVN8KHUZsBn4Q_AUoAXoECAEQAw&cshid=1628566747467052&biw=2560&bih=1297&dpr=1.5"
-          >
+          <Link color={HighlightText} isExternal href={DURIAN_IMAGE_LINK}>
             durian
           </Link>
         </Text>
