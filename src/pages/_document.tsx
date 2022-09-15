@@ -59,6 +59,7 @@ class MyDocument extends Document {
             content="I'm a 5th year Computer Science and Business student seeking full time roles in Product & Software Engineering"
           />
           <meta itemProp="image" content={PREVIEW_IMAGE} />
+          <meta name="author" content="Justin Zhang" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@justinnzhang" />
