@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 const APP_NAME = "Hire Justin Zhang";
-const PREVIEW_IMAGE = "preview-image.png";
+const PREVIEW_IMAGE = "/preview-image.png";
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
