@@ -20,8 +20,8 @@ export const ValuesSection = () => {
           <Image
             src="/static/memoji-thinking.png"
             alt="Memoji representation of Justin Zhang on a laptop"
-            width="200rem"
-            height="200rem"
+            width={200}
+            height={200}
           />
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" gap={2} alignItems="center">

@@ -10,13 +10,13 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Box transition="0.3s all ease-out" id="top">
-      <Box as="main">
+    <>
+      <Box as="main" transition="0.3s all ease-out" id="top">
         <Header />
         {children}
       </Box>
       <Footer />
-    </Box>
+    </>
   );
 };
 

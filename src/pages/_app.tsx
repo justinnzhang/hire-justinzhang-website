@@ -33,7 +33,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-        <title>Hire Justin Zhang The New Grad</title>
+        <title>Hire Justin Zhang | Product Engineer</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

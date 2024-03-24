@@ -27,8 +27,6 @@ interface Props {
 }
 
 export const WorkCard = ({ item }: Props) => {
-  const isSmall = useBreakpointValue({ base: true, md: false });
-
   const BodyText = useColorModeValue("gray.500", "gray.400");
   const CardBg = useColorModeValue("gray.100", "gray.700");
   const CardTitle = useColorModeValue("blue.500", "blue.300");
@@ -38,16 +36,16 @@ export const WorkCard = ({ item }: Props) => {
     item;
 
   return (
-    <AnimateChild className={isSmall ? "work-card-margin" : ""}>
+    <AnimateChild>
       <Box
         bg={CardBg}
         p={8}
         borderRadius="lg"
         h="100%"
-        w={isSmall ? "80vw" : "100%"}
-        mr={isSmall ? 4 : 0}
+        w={["90vw", "50vw", "30vw"]}
         display="flex"
         alignItems="center"
+        mr={4}
       >
         <Stack spacing={4}>
           <Image

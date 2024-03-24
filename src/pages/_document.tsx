@@ -2,6 +2,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 const APP_NAME = "Hire Justin Zhang";
 const PREVIEW_IMAGE = "https://hirejustinzhang.com/preview-image.png";
+const DESCRIPTION =
+  "An interactive cover letter to highlight who I am beyond the resume - I am a product-minded Software Engineer with a background in business & design";
 class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -48,31 +50,22 @@ class MyDocument extends Document {
             }}
           />
 
-          <meta
-            name="description"
-            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking summer 2022 Product Management internships."
-          />
+          <meta name="description" content={DESCRIPTION} />
 
           <meta itemProp="name" content="Hire Justin Zhang" />
-          <meta
-            itemProp="description"
-            content="I'm a 5th year Computer Science and Business student seeking full time roles in Product & Software Engineering"
-          />
+          <meta itemProp="description" content={DESCRIPTION} />
           <meta itemProp="image" content={PREVIEW_IMAGE} />
           <meta name="author" content="Justin Zhang" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@justinnzhang" />
           <meta name="twitter:title" content="Hire Justin Zhang" />
-          <meta
-            name="twitter:description"
-            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking full time roles in Product & Software Engineering."
-          />
+          <meta name="twitter:description" content={DESCRIPTION} />
           <meta name="twitter:creator" content="@justinnzhang" />
           <meta name="twitter:image" content={PREVIEW_IMAGE} />
           <meta
             name="twitter:image:alt"
-            content="Blue to purple gradient with the text: Seeking full time roles in Product & Software Engineering, An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
+            content="Blue to purple gradient with the text: An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
           />
 
           <meta property="og:title" content="Hire Justin Zhang" />
@@ -84,10 +77,7 @@ class MyDocument extends Document {
             property="og:image:alt"
             content="Blue to purple gradient with the text: Seeking Summer 2022 Product Management Internships, An interactive cover letter, let’s start the conversation! Followed by a memoji representation of Justin Zhang's face"
           />
-          <meta
-            property="og:description"
-            content="An interactive cover letter to highlight who I am beyond the resume. Currently a Computer Science and Business student seeking full time roles in Product & Software Engineering."
-          />
+          <meta property="og:description" content={DESCRIPTION} />
           <meta property="og:site_name" content="Hire Justin Zhang" />
         </Head>
         <body>
