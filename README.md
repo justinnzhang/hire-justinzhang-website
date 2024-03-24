@@ -3,8 +3,7 @@ Bootstrapped using [nextchakra-starter](https://github.com/sozonome/nextchakra-s
 ![6D73B470-263F-4BA3-A68B-233616E5A86B](https://user-images.githubusercontent.com/54298320/128747520-3f4eb48f-e91f-4281-b6ed-8fd38c3d555e.png)
 
 # 👋 Hello there!
-My name is Justin Zhang, a Computer Science and Business student at Western University - graduating in Spring 2023. 
-**Actively seeking Product Management and Software Engineering internships for Summer 2022.**
+My name is Justin Zhang, a Product Software Engineer.
 
 I've always believed in learning through doing and challenging myself to try new things, so here I am!
 
