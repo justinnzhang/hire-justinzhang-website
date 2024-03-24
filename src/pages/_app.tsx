@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, createLocalStorageManager } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import "@fontsource/inter/latin.css";
@@ -12,6 +12,7 @@ import "styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const manager = createLocalStorageManager("hire-justin-zhang");
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -27,7 +28,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }, [router.events]);
 
   return (
-    <ChakraProvider theme={customTheme}>
+    <ChakraProvider theme={customTheme} colorModeManager={manager}>
       <Head>
         <meta
           name="viewport"

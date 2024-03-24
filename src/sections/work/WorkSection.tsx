@@ -11,7 +11,7 @@ import { TextRow } from "components/text-animations";
 import { easeProps } from "components/animation/variants";
 
 import content from "./content.json";
-import { useColorMode } from "@chakra-ui/react";
+import { useBreakpointValue, useColorMode } from "@chakra-ui/react";
 
 const PARENT_ANIMATION_VARIANTS = {
   initial: {
@@ -52,6 +52,11 @@ export const WorkSection = () => {
     triggerOnce: true,
   });
 
+  const fadeWidth = useBreakpointValue({
+    base: "5vw",
+    md: "70px",
+  });
+
   const isLightMode = useColorMode().colorMode === "light";
 
   const lightTransparent = "rgba(255, 255, 255, 0.00)";
@@ -75,7 +80,7 @@ export const WorkSection = () => {
         left: 0,
         top: 0,
         backgroundColor: "white",
-        width: "70px",
+        width: fadeWidth,
         height: "100%",
         background: `linear-gradient(90deg, ${full} 0%, ${transparent} 100%)`,
         zIndex: 10,
@@ -87,7 +92,7 @@ export const WorkSection = () => {
         right: 0,
         top: 0,
         backgroundColor: "white",
-        width: "70px",
+        width: fadeWidth,
         height: "100%",
         background: `linear-gradient(90deg, ${transparent}, ${full} 100%)`,
         zIndex: 10,

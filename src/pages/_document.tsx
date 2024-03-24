@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ColorModeScript, theme } from "@chakra-ui/react";
 
 const APP_NAME = "Hire Justin Zhang";
 const PREVIEW_IMAGE = "https://hirejustinzhang.com/preview-image.png";
@@ -81,6 +82,11 @@ class MyDocument extends Document {
           <meta property="og:site_name" content="Hire Justin Zhang" />
         </Head>
         <body>
+          <ColorModeScript
+            initialColorMode={theme.config.initialColorMode}
+            storageKey="hire-justin-zhang"
+            type="cookie"
+          />
           <Main />
           <NextScript />
         </body>

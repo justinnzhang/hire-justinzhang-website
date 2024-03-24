@@ -2,7 +2,6 @@ import { Box, Heading, Text, Stack, Link } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { chakra } from "@chakra-ui/system";
-import { useBreakpointValue } from "@chakra-ui/media-query";
 
 import Image from "next/image";
 
@@ -39,10 +38,10 @@ export const WorkCard = ({ item }: Props) => {
     <AnimateChild>
       <Box
         bg={CardBg}
-        p={8}
+        p={[4, 8]}
         borderRadius="lg"
         h="100%"
-        w={["90vw", "50vw", "30vw"]}
+        w={["90vw", "80vw", "380px"]}
         display="flex"
         alignItems="center"
         mr={4}
