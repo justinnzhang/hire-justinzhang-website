@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, createLocalStorageManager } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import "@fontsource/inter/latin.css";
@@ -12,6 +12,7 @@ import "styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
+  const manager = createLocalStorageManager("hire-justin-zhang");
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -27,13 +28,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   }, [router.events]);
 
   return (
-    <ChakraProvider theme={customTheme}>
+    <ChakraProvider theme={customTheme} colorModeManager={manager}>
       <Head>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-        <title>Hire Justin Zhang The New Grad</title>
+        <title>Hire Justin Zhang | Product Engineer</title>
       </Head>
       <Layout>
         <Component {...pageProps} />

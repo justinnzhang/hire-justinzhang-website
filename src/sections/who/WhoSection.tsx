@@ -20,8 +20,8 @@ export const WhoSection = () => {
           <Image
             src="/static/memoji-smiling.png"
             alt="Memoji representation of Justin Zhang smiling"
-            width="200rem"
-            height="200rem"
+            width={200}
+            height={200}
           />
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" gap={2} alignItems="center">

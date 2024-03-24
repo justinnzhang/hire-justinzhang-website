@@ -33,12 +33,12 @@ export const FunFacts = () => {
         <Text color={CardText}>
           Lowest grade was a 51 in high school computer science
         </Text>
-        <Box position="absolute" top="0" right="0">
+        <Box position="absolute" top="2" right="2">
           <Image
             src="/static/memoji-smiling.png"
             alt="Memoji representation of Justin Zhang smiling"
-            width="120rem"
-            height="120rem"
+            width={100}
+            height={100}
           />
         </Box>
       </Stack>

@@ -39,7 +39,7 @@ export const ShortSection = ({ companyItem }: Props) => {
                   <Button
                     w="fit-content"
                     as={Link}
-                    href={companyItem?.resumeLink || RESUME_LINK}
+                    href={companyItem?.resumeLink ?? RESUME_LINK}
                     isExternal
                     variant="ghost"
                   >

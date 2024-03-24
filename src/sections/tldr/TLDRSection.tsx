@@ -30,12 +30,11 @@ export const TLDRSection = ({ setIsTLDR, isTLDR }: Props) => {
   const isLarge = useBreakpointValue({ base: true, xs: false, sm: false });
 
   return (
-    <Container maxW="container.lg" pt={16}>
+    <Container maxW="container.lg" pt={8}>
       <Box
-        borderRadius="md"
+        borderRadius="xl"
         p={8}
         overflow="hidden"
-        animate="0.333s all"
         bgGradient={`linear(to-l, ${
           isTLDR ? CardGradientStop : CardBg
         } 0%,  ${CardBg} 50%)`}

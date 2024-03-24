@@ -28,12 +28,6 @@ export const AnimateChild = ({
   className = "",
 }: AnimateChildProps) => {
   switch (direction) {
-    case "up":
-      return (
-        <motion.div variants={fadeUpChild} className={className}>
-          {children}
-        </motion.div>
-      );
     case "left":
       return (
         <motion.div variants={fadeLeftChild} className={className}>

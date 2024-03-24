@@ -6,7 +6,6 @@ import {
   Container,
   Grid,
   GridItem,
-  Stack,
   List,
   ListItem,
 } from "@chakra-ui/react";
@@ -39,7 +38,7 @@ const SOCIAL_MEDIA = [
   },
   {
     icon: <IoGlobeOutline />,
-    url: "https://justinzhang.ca",
+    url: "https://justinzha.ng",
     alt: "Website",
   },
 ];

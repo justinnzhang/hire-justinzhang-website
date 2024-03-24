@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Heading,
   Text,
   Stack,
   Grid,
@@ -9,7 +8,6 @@ import {
   Center,
   Badge,
 } from "@chakra-ui/layout";
-import { chakra } from "@chakra-ui/system";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import Image from "next/image";
 
@@ -44,8 +42,8 @@ export const SkillsSection = () => {
           <Image
             src="/static/memoji-laptop.png"
             alt="Memoji representation of Justin Zhang smiling"
-            width="200rem"
-            height="200rem"
+            width={200}
+            height={200}
           />
         </Center>
         <Grid templateColumns="repeat(12, 1fr)" gap={2} alignItems="center">

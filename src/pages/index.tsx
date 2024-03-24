@@ -71,7 +71,7 @@ const Home = () => {
    * hi = Powers the custom company resume
    * r = Toggles the site between SWE & Product
    */
-  const { hi, r } = router.query;
+  const { hi } = router.query;
 
   const [isTLDR, setIsTLDR] = useBoolean(false);
   const [open, setOpen] = useState(
@@ -110,10 +110,7 @@ const Home = () => {
         setOpen={setOpen}
         typeOfBrowser={getBrowserType()}
       />
-      <HeroSection
-        companyItem={selectedCompany}
-        interestedRole={getInterestedRoleSetting(r)}
-      />
+      <HeroSection companyItem={selectedCompany} />
       <TLDRSection setIsTLDR={setIsTLDR} isTLDR={isTLDR} />
       {contentMarkup}
     </Box>

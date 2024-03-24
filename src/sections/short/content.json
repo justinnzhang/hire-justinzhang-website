@@ -1,12 +1,12 @@
 [
   {
     "style": "HEADING",
-    "text": "I'm a Computer Science and Business student",
-    "textEmp": "with a background in Design"
+    "text": "I'm a Product Engineer with a double degree in",
+    "textEmp": "Computer Science & Business"
   },
   {
     "style": "BODY",
-    "text": "My number 1 passion is making things - hence Product Management and being a product-minded Software Engineer are ways for me to build across engineering, design, and business"
+    "text": "My number 1 passion is making things - hence being a product-minded Software Engineer are ways for me to build across engineering, design, and business"
   },
   {
     "style": "BODY",
@@ -14,6 +14,6 @@
   },
   {
     "style": "BODY",
-    "text": "I've got a lot more to share, and would love to chat about potential internship opportunities; even if they don't exist yet - let's get the conversation started!"
+    "text": "I've got a lot more to share, and am always down to chat about new opportunities; even if they don't exist yet - let's get the conversation started!"
   }
 ]
