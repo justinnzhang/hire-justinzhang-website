@@ -35,7 +35,6 @@ export const TLDRSection = ({ setIsTLDR, isTLDR }: Props) => {
         borderRadius="md"
         p={8}
         overflow="hidden"
-        animate="0.333s all"
         bgGradient={`linear(to-l, ${
           isTLDR ? CardGradientStop : CardBg
         } 0%,  ${CardBg} 50%)`}
