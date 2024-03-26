@@ -4,6 +4,7 @@ import { ChakraProvider, createLocalStorageManager } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import "@fontsource/inter/latin.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import Layout from "components/layout";
 
@@ -39,6 +40,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <SpeedInsights />
     </ChakraProvider>
   );
 };
